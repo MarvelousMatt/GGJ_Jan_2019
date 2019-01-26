@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 
     string input;
-    public enum AttackStyle {above,sideL,sideR,arcingL,arcingR,noDamage}//Wiggly handled elsewhere
+    public enum AttackStyle {above,sideL,sideR,arcingL,arcingR,noDamage,extra1,extra2,extra3}//Wiggly handled elsewhere
     public AttackStyle style;
 
     public GameObject[] letterObjects;
@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour {
     public GameObject blDummy;
     public GameObject trDummy;
     public GameObject brDummy;
+    public GameObject extra1;
+    public GameObject extra2;
+    public GameObject extra3;
 
     public bool waveStarted;
 
@@ -160,6 +163,18 @@ public class GameManager : MonoBehaviour {
             case AttackStyle.noDamage:
                 spawnDummy = tlDummy;
                 break;
+            case AttackStyle.extra1:
+                spawnDummy = extra1;
+                attack = AttackStyle.noDamage;
+                break;
+            case AttackStyle.extra2:
+                spawnDummy = extra2;
+                attack = AttackStyle.noDamage;
+                break;
+            case AttackStyle.extra3:
+                spawnDummy = extra3;
+                attack = AttackStyle.noDamage;
+                break;
 
 
 
@@ -282,11 +297,11 @@ public class GameManager : MonoBehaviour {
         waveStarted = true;
 
 
-        BeginTyping(0, AttackStyle.noDamage, 0.01f);
+        BeginTyping(0, AttackStyle.extra1, 0.01f);
         yield return new WaitForSeconds(5f);
-        BeginTyping(2, AttackStyle.sideL, 0.01f);
-        BeginTyping(2, AttackStyle.sideR, 0.01f);
-        BeginTyping(5, AttackStyle.above, 0.01f);
+        BeginTyping(2, AttackStyle.extra2, 0.01f);
+        BeginTyping(2, AttackStyle.extra3, 0.01f);
+        //BeginTyping(5, AttackStyle., 0.01f);
         
         
         //waveNo++;
