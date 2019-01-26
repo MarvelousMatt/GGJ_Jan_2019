@@ -4,15 +4,42 @@ using UnityEngine;
 
 public class DamagingObject : MonoBehaviour {
 
+    public bool isParent = false;
+    public bool isMegaParent = false;
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (isMegaParent)
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                for (int m = 0; m < transform.GetChild(i).childCount; m++)
+                {
+                    Rigidbody rigid = transform.GetChild(i).GetChild(m).gameObject.AddComponent<Rigidbody>();
+                    rigid.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
+                    rigid.AddForce(Vector3.down * 1000); 
+                }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+                transform.GetChild(i).DetachChildren();
+
+            }
+
+            transform.DetachChildren();
+            Destroy(gameObject);
+        }
+
+        if (isParent)
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                Rigidbody rigid = transform.GetChild(i).gameObject.AddComponent<Rigidbody>();
+                rigid.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
+                rigid.AddForce(Vector3.down * 1000);
+            }
+
+            transform.DetachChildren();
+
+            Destroy(gameObject);
+        }
+    }
 }
