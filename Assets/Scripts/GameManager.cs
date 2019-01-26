@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 
     string input;
-    public enum AttackStyle {above,sideL,sideR,arcing,noDamage}//Wiggly handled elsewhere
+    public enum AttackStyle {above,sideL,sideR,arcingL,arcingR,noDamage}//Wiggly handled elsewhere
     public AttackStyle style;
 
     public GameObject[] letterObjects;
@@ -153,6 +153,9 @@ public class GameManager : MonoBehaviour {
             case AttackStyle.sideL:
                 spawnDummy = blDummy;
                 break;
+            case AttackStyle.sideR:
+                spawnDummy = brDummy;
+                break;
             case AttackStyle.noDamage:
                 spawnDummy = tlDummy;
                 break;
@@ -193,7 +196,7 @@ public class GameManager : MonoBehaviour {
                 currentParent = new GameObject();
                 currentParent.transform.position = spawnDummy.transform.position;
 
-                if(attack == AttackStyle.sideL || attack == AttackStyle.sideL)
+                if(attack == AttackStyle.sideL || attack == AttackStyle.sideR)
                 {
                     parents.Add(currentParent);
                 }
@@ -249,8 +252,13 @@ public class GameManager : MonoBehaviour {
 
             Rigidbody rig = megaParent.AddComponent<Rigidbody>();
             rig.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
-            rig.AddForce(Vector3.left * 1000);
-            
+
+            if(attack == AttackStyle.sideL)
+                rig.AddForce(Vector3.left * 1000);
+            else
+                rig.AddForce(Vector3.left * - 1 * 1000);
+
+
         }
             
 
@@ -275,8 +283,9 @@ public class GameManager : MonoBehaviour {
 
         BeginTyping(0, AttackStyle.noDamage, 0.01f);
         yield return new WaitForSeconds(5f);
-        BeginTyping(1, AttackStyle.sideL, 0.01f);
-        BeginTyping(1, AttackStyle.sideL, 0.01f);
+        BeginTyping(2, AttackStyle.sideL, 0.01f);
+        BeginTyping(2, AttackStyle.sideR, 0.01f);
+        BeginTyping(5, AttackStyle.above, 0.01f);
         
         
         //waveNo++;
