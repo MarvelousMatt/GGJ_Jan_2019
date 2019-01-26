@@ -11,7 +11,7 @@ public class DamagingObject : MonoBehaviour {
 
     private void Awake()
     {
-        gameObject.tag = "Damage";
+        //gameObject.tag = "Damage";
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,7 +36,15 @@ public class DamagingObject : MonoBehaviour {
                 }
 
                 transform.DetachChildren();
+
+                if (other.gameObject.CompareTag("Prop"))
+                {
+                    other.gameObject.GetComponent<Prop>().PropTakeDamage(1);
+                }
+
                 Destroy(gameObject);
+
+               
             }
 
             if (isParent)
@@ -51,8 +59,13 @@ public class DamagingObject : MonoBehaviour {
                 }
 
                 transform.DetachChildren();
-
+                if (other.gameObject.CompareTag("Prop"))
+                {
+                    other.gameObject.GetComponent<Prop>().PropTakeDamage(1);
+                }
                 Destroy(gameObject);
+
+                
             }
         }
     }
@@ -78,6 +91,10 @@ public class DamagingObject : MonoBehaviour {
                     transform.GetChild(i).DetachChildren();
 
                 }
+                if (collision.collider.gameObject.CompareTag("Prop"))
+                {
+                    collision.collider.gameObject.GetComponent<Prop>().PropTakeDamage(1);
+                }
 
                 transform.DetachChildren();
                 Destroy(gameObject);
@@ -95,7 +112,10 @@ public class DamagingObject : MonoBehaviour {
                 }
 
                 transform.DetachChildren();
-
+                if (collision.collider.gameObject.CompareTag("Prop"))
+                {
+                    collision.collider.gameObject.GetComponent<Prop>().PropTakeDamage(1);
+                }
                 Destroy(gameObject);
             }
         }

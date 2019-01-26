@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 64514445635843454}
   m_Layer: 0
   m_Name: L
-  m_TagString: Damage
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

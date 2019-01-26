@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour {
         else
         {
             startWaveButton.interactable = true;
+          
         }
 
 
@@ -62,7 +63,7 @@ public class GameManager : MonoBehaviour {
         }
 
 
-
+        
 
     }
 

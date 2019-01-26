@@ -8,6 +8,7 @@ TagManager:
   - Prop
   - Floor
   - Damage
+  - Projectile
   layers:
   - Default
   - TransparentFX
