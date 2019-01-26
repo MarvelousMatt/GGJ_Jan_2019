@@ -17,9 +17,12 @@ public class Bed : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<DamagingObject>())
+        if (other.gameObject.CompareTag("Damage")) 
         {
             //Destroy(this.gameObject);
+            other.gameObject.tag = "Player";
+            other.gameObject.GetComponent<Renderer>().material.color = Color.black;     
+
             Debug.Log("You die");
         }
     }

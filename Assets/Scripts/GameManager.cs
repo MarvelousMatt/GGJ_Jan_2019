@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour {
         switch (id)
         {
             case 0:
-                return "this is the tutorial and stuff";
+                return "this is the tutorial and stuff...";
             case 1:
                 return "plo";
             case 2:

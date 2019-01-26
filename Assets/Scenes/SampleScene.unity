@@ -785,8 +785,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0367637, y: 1.050864, z: 0.99999976}
-  m_Center: {x: -0.004318848, y: 0.025432173, z: 0}
+  m_Size: {x: 1.1351839, y: 1.12207, z: 0.99999976}
+  m_Center: {x: 0.0063086357, y: 0.061035175, z: 0}
 --- !u!114 &603049355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1478,11 +1478,11 @@ MonoBehaviour:
   - {fileID: 1625159534857510, guid: 0b3129c76cb8a1e448711e5db8677a95, type: 2}
   - {fileID: 1461046861471284, guid: dc15a9d365986ba4792e7541a251da2f, type: 2}
   - {fileID: 1963885751499240, guid: a95de42832d887e45982f11e0d5347e8, type: 2}
-  - {fileID: 1963885751499240, guid: a95de42832d887e45982f11e0d5347e8, type: 2}
-  - {fileID: 1963885751499240, guid: a95de42832d887e45982f11e0d5347e8, type: 2}
-  - {fileID: 1963885751499240, guid: a95de42832d887e45982f11e0d5347e8, type: 2}
-  - {fileID: 1963885751499240, guid: a95de42832d887e45982f11e0d5347e8, type: 2}
-  - {fileID: 1963885751499240, guid: a95de42832d887e45982f11e0d5347e8, type: 2}
+  - {fileID: 0}
+  - {fileID: 1963885751499240, guid: baa40973a6ccba14383003e4d63ed410, type: 2}
+  - {fileID: 1963885751499240, guid: 882777e480bf5a44996f6affde7ffdad, type: 2}
+  - {fileID: 1963885751499240, guid: 6485519520b6c9949bdbe37f867bbede, type: 2}
+  - {fileID: 1963885751499240, guid: 076a54970e4296447960be4d30c669de, type: 2}
   letterSpacing: 0.5
   wordSpacing: 0.75
   waveNo: 0
