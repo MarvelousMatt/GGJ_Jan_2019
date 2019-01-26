@@ -107,13 +107,78 @@ public class GameManager : MonoBehaviour {
         switch (id)
         {
             case 0:
-                return "this is the tutorial and stuff...";
+                return "Ahh… I could smell your fear from a mile away ";
             case 1:
-                return "plo";
+                return "Potent. ";
             case 2:
-                return "poop";
+                return "Pungent. ";
             case 3:
-                return "poop";
+                return "Delectable. ";
+            case 4:
+                return "Tell me, child, why do you fear the dark? ";
+            case 5:
+                return "Aren’t you a little old to be scared of shadows? ";
+            case 6:
+                return "Although, now that I’m here... ";
+            case 7:
+                return "I suppose you have a reason to be afraid. ";
+
+            //drop letters here
+
+            case 8:
+                return "Oh I’m sorry. I jumped the gun a tad. ";
+            case 9:
+                return "I’m afraid it is in my nature, you see. ";
+            case 10:
+                return "Your suffering is my sustenance. ";
+            case 11:
+                return "You can hardly blame me for that, can you? ";
+            case 12:
+                return "But enough dawdling. To business. ";
+            case 13:
+                return "I was thinking of moving into your wardrobe... ";
+            case 14:
+                return "but I think I’ll leave such cramped quarters... ";
+            case 15:
+                return "to a being of less refined tastes. ";
+            case 16:
+                return "How about... under your bed? ";
+            case 17:
+                return "Yes, I think that suits me rather nicely. ";
+
+            //have words attack player and teddy/defences spawn in
+
+            case 18:
+                return "Oh? What’s this? It seems we have a squatter. ";
+            case 19:
+                return "If you're a monster, you're not a very good one. ";
+            case 20:
+                return "The child felt right at home before I came along. ";
+            case 21:
+                return "I could barely tell that you were there! ";
+            case 22:
+                return "How embarrassing for you. ";
+            case 23:
+                return "You must also feel very at home here. ";
+            case 24:
+                return "You’re comfortable, aren’t you? ";
+            case 25:
+                return "Too comfortable. ";
+            case 26:
+                return "Pathetic in your positivity. ";
+            case 27:
+                return "I think it's about time you let me take your place. ";
+
+            //nightmare attacks again but it don't work
+
+            case 28:
+                return "Tsk. Rude. Tell me... ";
+            case 29:
+                return "if you’re so intent on defending this child... ";
+            case 30:
+                return "how do you plan on defending yourself? ";
+
+                //player prepares for 1st wave
 
 
 
@@ -297,13 +362,70 @@ public class GameManager : MonoBehaviour {
         waveStarted = true;
 
 
-        BeginTyping(0, AttackStyle.extra1, 0.01f);
-        yield return new WaitForSeconds(5f);
-        BeginTyping(2, AttackStyle.extra2, 0.01f);
-        BeginTyping(2, AttackStyle.extra3, 0.01f);
-        //BeginTyping(5, AttackStyle., 0.01f);
-        
-        
+        BeginTyping(0, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(1, AttackStyle.extra1, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(2, AttackStyle.extra2, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(3, AttackStyle.extra3, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(4, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(5, AttackStyle.extra1, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(6, AttackStyle.extra2, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(7, AttackStyle.extra3, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(8, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(9, AttackStyle.extra1, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(10, AttackStyle.extra2, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(11, AttackStyle.extra3, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(12, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(13, AttackStyle.extra1, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(14, AttackStyle.extra2, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(15, AttackStyle.extra3, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(16, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(17, AttackStyle.extra1, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(18, AttackStyle.extra2, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(19, AttackStyle.extra3, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(20, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(21, AttackStyle.extra1, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(22, AttackStyle.extra2, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(23, AttackStyle.extra3, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(24, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(25, AttackStyle.extra1, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(26, AttackStyle.extra2, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(27, AttackStyle.extra3, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(28, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(29, AttackStyle.extra1, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+        BeginTyping(30, AttackStyle.extra2, 0.05f);
+        yield return new WaitForSeconds(4.5f);
+
+
         //waveNo++;
         waveStarted = false;
         ButtonCall(true);
