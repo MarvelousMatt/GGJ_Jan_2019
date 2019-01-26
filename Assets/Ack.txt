@@ -1,0 +1,22 @@
+Features to do:
+
+Side attackX
+wave manager X
+bind words together X
+words break into letters on hit X
+no damage mode X
+Health on objectsX
+damage fixX
+dont smother the childX
+multiple lines at onceX
+
+attack warnings
+Arc attack 
+finale typing attack
+UI indicator and item choosing
+implement art
+do interactable items - plaster heal damage, toy soldier patrols, dream catcher repels, worry doll fortify
+game over
+win state
+main menu
+quit button
