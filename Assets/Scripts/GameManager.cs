@@ -337,26 +337,53 @@ public class GameManager : MonoBehaviour {
                 return "This is decidedly not worth the effort. ";
             case 74:
                 return "B U T . I . W O N ' T . S T O P . N O W . ";
+            case 75:
+                return "STICKS ";
+            case 76:
+                return "AND ";
+            case 77:
+                return "STONES ";
+            case 78:
+                return "MAY ";
+            case 79:
+                return "BREAK ";
+            case 80:
+                return "MY ";
+            case 81:
+                return "BONES ";
+            case 82:
+                return "B U T ";
+            case 83:
+                return "W O R D S ";
+            case 84:
+                return "W I L L ";
+            case 85:
+                return "N E V E R";
+            case 86:
+                return "H U R T ";
+            case 87:
+                return "M E ";
+
 
             //PLAYER CHATS SHIT
 
-            case 75:
+            case 88:
                 return "Ack! I find your words offensive! ";
-            case 76:
+            case 89:
                 return "I had no idea you were so poetic! ";
-            case 77:
+            case 90:
                 return "...Fine then.  ";
-            case 78:
+            case 91:
                 return "I relent.  ";
-            case 79:
+            case 92:
                 return "Keep your home as it is, 'squatter'.  ";
-            case 80:
+            case 93:
                 return "I'll find somewhere else to go. ";
-            case 81:
+            case 94:
                 return "If home means 'safety'... ";
-            case 82:
-                return "Then I guess you and the child both get to keep it. ";
-            case 83:
+            case 95:
+                return "Then I guess you both get to keep it. ";
+            case 96:
                 return "...For now. ";
 
 
@@ -755,15 +782,15 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         BeginTyping(67, AttackStyle.arcingR, 0.05f);
         yield return new WaitForSeconds(1f);
-        BeginTyping(68, AttackStyle.sideL, 0.05f);
+        BeginTyping(68, AttackStyle.sideR, 0.05f);
         yield return new WaitForSeconds(1f);
-        BeginTyping(69, AttackStyle.sideL, 0.05f);
+        BeginTyping(69, AttackStyle.arcingL, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(70, AttackStyle.sideL, 0.05f);
+        BeginTyping(70, AttackStyle.arcingL, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(71, AttackStyle.sideL, 0.05f);
+        BeginTyping(71, AttackStyle.arcingR, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(72, AttackStyle.sideL, 0.05f);
+        BeginTyping(72, AttackStyle.arcingR, 0.05f);
         yield return new WaitForSeconds(2f);
 
 
@@ -780,30 +807,56 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(1);
         //ur stuff
 
-        BeginTyping(73, AttackStyle.above, 0.05f);
+        BeginTyping(73, AttackStyle.arcingL, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(74, AttackStyle.above, 0.05f);
+        BeginTyping(74, AttackStyle.arcingL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(75, AttackStyle.arcingR, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(76, AttackStyle.arcingR, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(77, AttackStyle.arcingL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(78, AttackStyle.arcingL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(79, AttackStyle.arcingR, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(80, AttackStyle.arcingR, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(81, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(82, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(83, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(84, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(85, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(86, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(87, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
 
         //player enters new text here
 
+        BeginTyping(88, AttackStyle.noDamage, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(75, AttackStyle.above, 0.05f);
+        BeginTyping(89, AttackStyle.extra1, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(76, AttackStyle.above, 0.05f);
+        BeginTyping(90, AttackStyle.extra2, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(77, AttackStyle.noDamage, 0.05f);
+        BeginTyping(91, AttackStyle.extra3, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(78, AttackStyle.noDamage, 0.05f);
+        BeginTyping(92, AttackStyle.noDamage, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(79, AttackStyle.noDamage, 0.05f);
+        BeginTyping(93, AttackStyle.extra1, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(80, AttackStyle.noDamage, 0.05f);
+        BeginTyping(94, AttackStyle.extra2, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(81, AttackStyle.noDamage, 0.05f);
+        BeginTyping(95, AttackStyle.extra3, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(82, AttackStyle.noDamage, 0.05f);
-        yield return new WaitForSeconds(2f);
-        BeginTyping(83, AttackStyle.noDamage, 0.05f);
+        BeginTyping(96, AttackStyle.noDamage, 0.05f);
         yield return new WaitForSeconds(2f);
 
 
