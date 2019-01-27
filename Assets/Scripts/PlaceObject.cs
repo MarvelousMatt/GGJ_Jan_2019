@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlaceObject : MonoBehaviour {
 
     public GameObject[] itemToPlace;
     public GameObject[] holograms;
+    public int[] amounts;
+
+
+    public Text leftNo;
 
     Camera cam;
 
@@ -26,28 +31,74 @@ public class PlaceObject : MonoBehaviour {
 
     public bool canPlace = false;
 
+    public GameObject previewBox;
+
+    bool isButton = false;
+
+    int indexSave = 0;
+
+
     private void Awake()
     {
         cam = Camera.main;
     }
 
 
+    public void SwapItem(bool left)
+    {
+        if (left && itemIndex != 0)
+        {
+            itemIndex -= 1;
+        }
+        else if(!left && itemIndex != itemToPlace.Length - 1)
+        {
+            itemIndex += 1;
+        }
+
+        if(currentHolo != null)
+        {
+            Destroy(currentHolo);
+        }
+
+        
+        leftNo.text = amounts[itemIndex].ToString();
+        
+    }
+
+   void NotButton()
+    {
+        isButton = false;
+    }
+    
+
     // Use this for initialization
     void Start () {
-		
-	}
+        leftNo.text = amounts[itemIndex].ToString();
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
-        if(currentHolo != null)
+        if(indexSave != itemIndex)
+        {
+            isButton = true;
+            Invoke("NotButton", 0.5f);
+        }
+
+      
+
+        if (currentHolo != null)
             mat = currentHolo.GetComponent<Renderer>().material;
 
 
         ItemHover();
 
-        if (Input.GetMouseButtonDown(0))
-            PlaceItem();
+
+        if (Input.GetMouseButtonDown(0) && !isButton)
+            Invoke("PlaceItem", 0.2f);
+
+        indexSave = itemIndex;
+      
 	}
 
     void ItemHover()
@@ -71,6 +122,16 @@ public class PlaceObject : MonoBehaviour {
             {
                 currentHolo = Instantiate(holograms[itemIndex], holoPos, Quaternion.identity);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            currentHolo.transform.Rotate(Vector3.forward * 90);
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            currentHolo.transform.Rotate(Vector3.back * 90);
         }
 
         if(currentHolo != null)
@@ -109,10 +170,16 @@ public class PlaceObject : MonoBehaviour {
     void PlaceItem()
     { 
 
-        if (currentHolo != null && canPlace)
+
+        if (currentHolo != null && canPlace && !isButton && amounts[itemIndex] != 0)
         {
-            Instantiate(itemToPlace[itemIndex], holoPos, Quaternion.identity);
+            Instantiate(itemToPlace[itemIndex], holoPos, currentHolo.transform.rotation);
+            amounts[itemIndex] -= 1;
         }
+
+        leftNo.text = amounts[itemIndex].ToString();
+
+        
     }
 
 

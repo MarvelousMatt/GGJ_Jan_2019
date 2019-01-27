@@ -19,6 +19,12 @@ public class GameManager : MonoBehaviour {
     public int waveNo;
     public int waveStage;
 
+    public Text aboveLabel;
+    public Text arcLabel;
+    public Text sideLabel;
+
+    public Vector3[] warnings;
+
     public GameObject tlDummy;
     public GameObject blDummy;
     public GameObject trDummy;
@@ -36,6 +42,7 @@ public class GameManager : MonoBehaviour {
     void Awake()
     {
         letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ,.!?'".ToLower().ToCharArray();
+        ButtonCall(true);
     }
 
     public void ButtonCall(bool doReset)
@@ -48,9 +55,13 @@ public class GameManager : MonoBehaviour {
         else
         {
             startWaveButton.interactable = true;
+            
           
         }
 
+        aboveLabel.text = warnings[waveNo].x.ToString();
+        arcLabel.text = warnings[waveNo].y.ToString();
+        sideLabel.text = warnings[waveNo].z.ToString();
 
     }
    
