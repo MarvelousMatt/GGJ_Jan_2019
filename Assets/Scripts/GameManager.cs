@@ -118,9 +118,9 @@ public class GameManager : MonoBehaviour {
         switch (id)
         {
             case 0:
-                return "Ahh… I could smell your fear from a mile away ";
+                return "Ahh... I think I've found a new home. ";
             case 1:
-                return "Potent. ";
+                return "Your fear is... potent. ";
             case 2:
                 return "Pungent. ";
             case 3:
@@ -128,18 +128,18 @@ public class GameManager : MonoBehaviour {
             case 4:
                 return "Tell me, child, why do you fear the dark? ";
             case 5:
-                return "Aren’t you a little old to be scared of shadows? ";
+                return "Aren't you a little old to be scared of shadows? ";
             case 6:
-                return "Although, now that I’m here... ";
+                return "Although, now that I'm here... ";
             case 7:
-                return "I suppose you have a reason to be afraid. ";
+                return "I suppose you have a reason to be fearful. ";
 
             //drop letters here
 
             case 8:
-                return "Oh I’m sorry. I jumped the gun a tad. ";
+                return "Oh I'm sorry. I jumped the gun a tad. ";
             case 9:
-                return "I’m afraid it is in my nature, you see. ";
+                return "I'm afraid it is in my nature, you see. ";
             case 10:
                 return "Your suffering is my sustenance. ";
             case 11:
@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour {
             case 13:
                 return "I was thinking of moving into your wardrobe... ";
             case 14:
-                return "but I think I’ll leave such cramped quarters... ";
+                return "but I think I'll leave such cramped quarters... ";
             case 15:
                 return "to a being of less refined tastes. ";
             case 16:
@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour {
             //have words attack player and teddy/defences spawn in
 
             case 18:
-                return "Oh? What’s this? It seems we have a squatter. ";
+                return "Oh? What's this? It seems we have a squatter. ";
             case 19:
                 return "If you're a monster, you're not a very good one. ";
             case 20:
@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour {
             case 23:
                 return "You must also feel very at home here. ";
             case 24:
-                return "You’re comfortable, aren’t you? ";
+                return "You're comfortable, aren’t you? ";
             case 25:
                 return "Too comfortable. ";
             case 26:
@@ -185,11 +185,136 @@ public class GameManager : MonoBehaviour {
             case 28:
                 return "Tsk. Rude. Tell me... ";
             case 29:
-                return "if you’re so intent on defending this child... ";
+                return "if you're so intent on defending this child's home... ";
             case 30:
-                return "how do you plan on defending yourself? ";
+                return "how do you plan on defending yours? ";
 
-                //player prepares for 1st wave
+            //player prepares for 1st wave
+
+            //1ST WAVE
+            case 31:
+                return "Coward ";
+            case 32:
+                return "Pathetic ";
+            case 33:
+                return "Inconsequential ";
+            case 34:
+                return "Insignificant ";
+            case 35:
+                return "Pitiful ";
+
+
+            //2ND WAVE
+            case 36:
+                return "Useless ";
+            case 37:
+                return "Worthless ";
+            case 38:
+                return "Wretched ";
+            case 39:
+                return "Weak ";
+            case 40:
+                return "Disappointment ";
+            case 41:
+                return "Idiot ";
+            case 42:
+                return "Moron ";
+
+
+            //3RD WAVE
+            case 43:
+                return "What does home mean to you, child? ";
+            case 44:
+                return "Is it the smell of your mother’s cooking? ";
+            case 45:
+                return "The comfort of your warm bed? ";
+            case 46:
+                return "Your fruitless,  ";
+            case 47:
+                return "infantile attempts... ";
+            case 48:
+                return "to find security in a world... ";
+            case 49:
+                return "full of anxieties and uncertainties? ";
+            case 50:
+                return "I don't have a home, you know. ";
+            case 51:
+                return "You're both being very selfish. ";
+            case 52:
+                return "Don't you think I am entitled to such things? ";
+            case 53:
+                return "Why ";
+            case 54:
+                return "Don't ";
+            case 55:
+                return "You ";
+            case 56:
+                return "Let ";
+            case 57:
+                return "Me ";
+            case 58:
+                return "Take ";
+            case 59:
+                return "Yours? ";
+
+
+            //4TH WAVE
+            case 60:
+                return "Crybaby ";
+            case 61:
+                return "Stupid ";
+            case 62:
+                return "Ugly ";
+            case 63:
+                return "Failure ";
+            case 64:
+                return "Mistake ";
+            case 65:
+                return "Loner ";
+            case 66:
+                return "Suffering ";
+            case 67:
+                return "Darkness ";
+            case 68:
+                return "Grief ";
+            case 69:
+                return "Why ";
+            case 70:
+                return "Won't ";
+            case 71:
+                return "You ";
+            case 72:
+                return "Die? ";
+
+            //5TH WAVE
+            case 73:
+                return "This is decidedly not worth the effort. ";
+            case 74:
+                return "B U T . I . W O N ' T . S T O P . N O W . ";
+
+            //PLAYER CHATS SHIT
+
+            case 75:
+                return "Ack! I find your words offensive! ";
+            case 76:
+                return "I had no idea you were so poetic! ";
+            case 77:
+                return "...Fine then.  ";
+            case 78:
+                return "I relent.  ";
+            case 79:
+                return "Keep your home as it is, 'squatter'.  ";
+            case 80:
+                return "I'll find somewhere else to go. ";
+            case 81:
+                return "If home means 'safety'... ";
+            case 82:
+                return "Then I guess you and the child both get to keep it. ";
+            case 83:
+                return "...For now. ";
+
+
+                //LIGHTS ON
 
 
 
@@ -386,8 +511,7 @@ public class GameManager : MonoBehaviour {
     IEnumerator Wave0()
     {
         waveStarted = true;
-        BeginTyping(1, AttackStyle.arcingL, 0.05f);
-        BeginTyping(1, AttackStyle.arcingR, 0.05f);
+
 
         BeginTyping(0, AttackStyle.noDamage, 0.05f);
         yield return new WaitForSeconds(4.5f);
@@ -403,7 +527,7 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(4.5f);
         BeginTyping(6, AttackStyle.extra2, 0.05f);
         yield return new WaitForSeconds(4.5f);
-        BeginTyping(7, AttackStyle.extra3, 0.05f);
+        BeginTyping(7, AttackStyle.above, 0.05f);
         yield return new WaitForSeconds(4.5f);
         BeginTyping(8, AttackStyle.noDamage, 0.05f);
         yield return new WaitForSeconds(4.5f);
@@ -423,7 +547,7 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(4.5f);
         BeginTyping(16, AttackStyle.noDamage, 0.05f);
         yield return new WaitForSeconds(4.5f);
-        BeginTyping(17, AttackStyle.extra1, 0.05f);
+        BeginTyping(17, AttackStyle.arcingL, 0.05f);
         yield return new WaitForSeconds(4.5f);
         BeginTyping(18, AttackStyle.extra2, 0.05f);
         yield return new WaitForSeconds(4.5f);
@@ -443,17 +567,202 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(4.5f);
         BeginTyping(26, AttackStyle.extra2, 0.05f);
         yield return new WaitForSeconds(4.5f);
-        BeginTyping(27, AttackStyle.extra3, 0.05f);
+        BeginTyping(27, AttackStyle.arcingL, 0.05f);
         yield return new WaitForSeconds(4.5f);
         BeginTyping(28, AttackStyle.noDamage, 0.05f);
         yield return new WaitForSeconds(4.5f);
         BeginTyping(29, AttackStyle.extra1, 0.05f);
         yield return new WaitForSeconds(4.5f);
-        BeginTyping(30, AttackStyle.extra2, 0.05f);
+        BeginTyping(30, AttackStyle.above, 0.05f);
         yield return new WaitForSeconds(4.5f);
 
 
-        //waveNo++;
+        waveNo++;
+        waveStarted = false;
+        ButtonCall(true);
+    }
+
+    IEnumerator Wave1()
+    {
+        waveStarted = true;
+
+        Debug.Log("Hello world");
+        yield return new WaitForSeconds(1);
+        //ur stuff
+
+        BeginTyping(31, AttackStyle.sideR, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(32, AttackStyle.sideR, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(33, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(34, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(35, AttackStyle.sideR, 0.05f);
+        yield return new WaitForSeconds(2f);
+
+
+        waveNo++;
+        waveStarted = false;
+        ButtonCall(true);
+    }
+
+    IEnumerator Wave2()
+    {
+        waveStarted = true;
+
+        Debug.Log("Hello world");
+        yield return new WaitForSeconds(1);
+        //ur stuff
+
+        BeginTyping(36, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(37, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(38, AttackStyle.sideR, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(39, AttackStyle.sideR, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(40, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(41, AttackStyle.sideR, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(42, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(2f);
+
+
+        waveNo++;
+        waveStarted = false;
+        ButtonCall(true);
+    }
+
+    IEnumerator Wave3()
+    {
+        waveStarted = true;
+
+        Debug.Log("Hello world");
+        yield return new WaitForSeconds(1);
+        //ur stuff
+
+        BeginTyping(43, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(44, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(45, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(46, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(47, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(48, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(49, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(50, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(51, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(52, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(53, AttackStyle.arcingL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(54, AttackStyle.arcingR, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(55, AttackStyle.arcingL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(56, AttackStyle.arcingR, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(57, AttackStyle.arcingL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(58, AttackStyle.arcingR, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(59, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+
+
+        waveNo++;
+        waveStarted = false;
+        ButtonCall(true);
+    }
+
+    IEnumerator Wave4()
+    {
+        waveStarted = true;
+
+        Debug.Log("Hello world");
+        yield return new WaitForSeconds(1);
+        //ur stuff
+
+        BeginTyping(60, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(1f);
+        BeginTyping(61, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(1f);
+        BeginTyping(62, AttackStyle.sideR, 0.05f);
+        yield return new WaitForSeconds(1f);
+        BeginTyping(63, AttackStyle.sideR, 0.05f);
+        yield return new WaitForSeconds(1f);
+        BeginTyping(64, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(1f);
+        BeginTyping(65, AttackStyle.sideR, 0.05f);
+        yield return new WaitForSeconds(1f);
+        BeginTyping(66, AttackStyle.arcingL, 0.05f);
+        yield return new WaitForSeconds(1f);
+        BeginTyping(67, AttackStyle.arcingR, 0.05f);
+        yield return new WaitForSeconds(1f);
+        BeginTyping(68, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(1f);
+        BeginTyping(69, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(70, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(71, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(72, AttackStyle.sideL, 0.05f);
+        yield return new WaitForSeconds(2f);
+
+
+        waveNo++;
+        waveStarted = false;
+        ButtonCall(true);
+    }
+
+    IEnumerator Wave5()
+    {
+        waveStarted = true;
+
+        Debug.Log("Hello world");
+        yield return new WaitForSeconds(1);
+        //ur stuff
+
+        BeginTyping(73, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(74, AttackStyle.above, 0.05f);
+
+        //player enters new text here
+
+        yield return new WaitForSeconds(2f);
+        BeginTyping(75, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(76, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(77, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(78, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(79, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(80, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(81, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(82, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(83, AttackStyle.noDamage, 0.05f);
+        yield return new WaitForSeconds(2f);
+
+
+
+        waveNo++;
         waveStarted = false;
         ButtonCall(true);
     }
