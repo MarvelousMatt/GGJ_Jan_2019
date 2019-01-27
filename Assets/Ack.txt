@@ -9,11 +9,13 @@ Health on objectsX
 damage fixX
 dont smother the childX
 multiple lines at onceX
+Arc attack X
+
+UI indicator and item choosing
 
 attack warnings
-Arc attack 
+rotate object
 finale typing attack
-UI indicator and item choosing
 implement art
 do interactable items - plaster heal damage, toy soldier patrols, dream catcher repels, worry doll fortify
 game over
