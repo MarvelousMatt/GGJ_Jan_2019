@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
     public float letterSpacing = 1;
     public float wordSpacing = 3;
 
-    public int waveNo;
+    public int waveNo = 0;
     public int waveStage;
 
     public Text aboveLabel;
@@ -43,6 +43,17 @@ public class GameManager : MonoBehaviour {
     {
         letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ,.!?'".ToLower().ToCharArray();
         ButtonCall(true);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            StopAllCoroutines();
+            waveNo++;
+            waveStarted = false;
+            ButtonCall(true);
+        }
     }
 
     public void ButtonCall(bool doReset)
@@ -72,8 +83,21 @@ public class GameManager : MonoBehaviour {
             case 0:
                 StartCoroutine(Wave0());
                 break;
-
-
+            case 1:
+                StartCoroutine(Wave1());
+                break;
+            case 2:
+                StartCoroutine(Wave2());
+                break;
+            case 3:
+                StartCoroutine(Wave3());
+                break;
+            case 4:
+                StartCoroutine(Wave4());
+                break;
+            case 5:
+                StartCoroutine(Wave5());
+                break;
         }
 
 
