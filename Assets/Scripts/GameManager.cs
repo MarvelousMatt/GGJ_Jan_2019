@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -66,8 +67,26 @@ public class GameManager : MonoBehaviour {
         else
         {
             startWaveButton.interactable = true;
-            
-          
+            GameObject[] l = GameObject.FindGameObjectsWithTag("Damage");
+            GameObject[] o = GameObject.FindGameObjectsWithTag("Projectile");
+            GameObject[] p = GameObject.FindGameObjectsWithTag("Player");
+
+
+            foreach (GameObject thing in l)
+            {
+                Destroy(thing);
+            }
+
+            foreach (GameObject thing in o)
+            {
+                Destroy(thing);
+            }
+
+            foreach (GameObject thing in p)
+            {
+                Destroy(thing);
+            }
+
         }
 
         aboveLabel.text = warnings[waveNo].x.ToString();
@@ -97,6 +116,9 @@ public class GameManager : MonoBehaviour {
                 break;
             case 5:
                 StartCoroutine(Wave5());
+                break;
+            case 6:
+                SceneManager.LoadScene("Win");
                 break;
         }
 
