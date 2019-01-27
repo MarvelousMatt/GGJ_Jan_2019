@@ -1548,6 +1548,7 @@ MonoBehaviour:
   waveStarted: 0
   noDamageDestroy: 1
   startWaveButton: {fileID: 1909752182}
+  overlay: {fileID: 812731816}
 --- !u!1 &1471893070
 GameObject:
   m_ObjectHideFlags: 0
