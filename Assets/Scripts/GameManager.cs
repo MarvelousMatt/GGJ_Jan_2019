@@ -333,7 +333,7 @@ public class GameManager : MonoBehaviour {
             case 81:
                 return "If home means 'safety'... ";
             case 82:
-                return "Then I guess you and the child both get to keep it. ";
+                return "Then I guess you both get to keep it. ";
             case 83:
                 return "...For now. ";
 
