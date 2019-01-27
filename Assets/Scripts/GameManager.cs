@@ -207,7 +207,7 @@ public class GameManager : MonoBehaviour {
         GameObject megaParent = null;
 
 
-        if(attack == AttackStyle.sideL || attack == AttackStyle.sideR)
+        if(attack == AttackStyle.sideL || attack == AttackStyle.sideR || attack == AttackStyle.arcingL || attack == AttackStyle.arcingR)
         {
             megaParent = new GameObject();
         }
@@ -240,7 +240,12 @@ public class GameManager : MonoBehaviour {
                 spawnDummy = extra3;
                 attack = AttackStyle.noDamage;
                 break;
-
+            case AttackStyle.arcingL:
+                spawnDummy = blDummy;
+                break;
+            case AttackStyle.arcingR:
+                spawnDummy = brDummy;
+                break;
 
 
         }
@@ -277,7 +282,7 @@ public class GameManager : MonoBehaviour {
                 currentParent = new GameObject();
                 currentParent.transform.position = spawnDummy.transform.position;
 
-                if(attack == AttackStyle.sideL || attack == AttackStyle.sideR)
+                if(attack == AttackStyle.sideL || attack == AttackStyle.sideR || attack == AttackStyle.arcingL || attack == AttackStyle.arcingR)
                 {
                     parents.Add(currentParent);
                 }
@@ -322,7 +327,7 @@ public class GameManager : MonoBehaviour {
 
         }
 
-        if (attack == AttackStyle.sideL || attack == AttackStyle.sideR)
+        if (attack == AttackStyle.sideL || attack == AttackStyle.sideR || attack == AttackStyle.arcingL || attack == AttackStyle.arcingR)
         {
             for (int i = 0; i < parents.Count; i++)
             {
@@ -333,11 +338,21 @@ public class GameManager : MonoBehaviour {
 
             Rigidbody rig = megaParent.AddComponent<Rigidbody>();
             rig.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
+                   
 
             if(attack == AttackStyle.sideL)
                 rig.AddForce(Vector3.left * 1000);
-            else
+            else if(attack == AttackStyle.sideR)
                 rig.AddForce(Vector3.left * - 1 * 1000);
+
+            if (attack == AttackStyle.arcingL)
+            {
+                rig.AddForce((Vector3.left + Vector3.up) * 350);
+            }
+            else if (attack == AttackStyle.arcingR)
+            {
+                rig.AddForce((Vector3.right + Vector3.up) * 350);
+            }
 
 
         }
@@ -360,7 +375,8 @@ public class GameManager : MonoBehaviour {
     IEnumerator Wave0()
     {
         waveStarted = true;
-
+        BeginTyping(1, AttackStyle.arcingL, 0.05f);
+        BeginTyping(1, AttackStyle.arcingR, 0.05f);
 
         BeginTyping(0, AttackStyle.noDamage, 0.05f);
         yield return new WaitForSeconds(4.5f);
