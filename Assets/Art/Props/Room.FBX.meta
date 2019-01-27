@@ -1,0 +1,278 @@
+fileFormatVersion: 2
+guid: 9554d3fe791bf4245b93669d7e2fb659
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bed
+    100002: Box110
+    100004: Box111
+    100006: Box117
+    100008: Box118
+    100010: Box119
+    100012: Box148
+    100014: Box174
+    100016: Box175
+    100018: Box176
+    100020: Box177
+    100022: Box178
+    100024: Line016
+    100026: Line022
+    100028: Line024
+    100030: Line026
+    100032: Line028
+    100034: Line030
+    100036: Line032
+    100038: Line034
+    100040: Line036
+    100042: Line038
+    100044: Line040
+    100046: Line042
+    100048: Line044
+    100050: Line046
+    100052: Line048
+    100054: Line050
+    100056: Line052
+    100058: Line054
+    100060: Line056
+    100062: Line058
+    100064: Line060
+    100066: Line062
+    100068: Line064
+    100070: Line066
+    100072: Line068
+    100074: Line070
+    100076: Line072
+    100078: Line074
+    100080: Line076
+    100082: Line078
+    100084: Line080
+    100086: Line082
+    100088: Line084
+    100090: Line086
+    100092: Line088
+    100094: Line090
+    100096: Object014
+    100098: Object015
+    100100: Object017
+    100102: Object018
+    100104: Object024
+    100106: Object026
+    100108: Object027
+    100110: Pillow003
+    100112: Pillow004
+    100114: //RootNode
+    400000: Bed
+    400002: Box110
+    400004: Box111
+    400006: Box117
+    400008: Box118
+    400010: Box119
+    400012: Box148
+    400014: Box174
+    400016: Box175
+    400018: Box176
+    400020: Box177
+    400022: Box178
+    400024: Line016
+    400026: Line022
+    400028: Line024
+    400030: Line026
+    400032: Line028
+    400034: Line030
+    400036: Line032
+    400038: Line034
+    400040: Line036
+    400042: Line038
+    400044: Line040
+    400046: Line042
+    400048: Line044
+    400050: Line046
+    400052: Line048
+    400054: Line050
+    400056: Line052
+    400058: Line054
+    400060: Line056
+    400062: Line058
+    400064: Line060
+    400066: Line062
+    400068: Line064
+    400070: Line066
+    400072: Line068
+    400074: Line070
+    400076: Line072
+    400078: Line074
+    400080: Line076
+    400082: Line078
+    400084: Line080
+    400086: Line082
+    400088: Line084
+    400090: Line086
+    400092: Line088
+    400094: Line090
+    400096: Object014
+    400098: Object015
+    400100: Object017
+    400102: Object018
+    400104: Object024
+    400106: Object026
+    400108: Object027
+    400110: Pillow003
+    400112: Pillow004
+    400114: //RootNode
+    2100000: Pillow
+    2100002: Bookshelves _ Painting
+    2100004: 01 - Default
+    2100006: 'Material #247'
+    2100008: 'Material #118'
+    2100010: Ball
+    2100012: 'Material #142'
+    2100014: 'Material #143'
+    2100016: 'Material #144'
+    2100018: 'Material #145'
+    2100020: 'Bed + Floor  + Wall Slot #5'
+    2100022: 'Bed + Floor  + Wall Slot #6'
+    2100024: 21 - Default
+    2100026: 'Material #215'
+    2300000: Bed
+    2300002: Box110
+    2300004: Box111
+    2300006: Box117
+    2300008: Box118
+    2300010: Box119
+    2300012: Box148
+    2300014: Box174
+    2300016: Box175
+    2300018: Box176
+    2300020: Box177
+    2300022: Box178
+    2300024: Object014
+    2300026: Object015
+    2300028: Object017
+    2300030: Object018
+    2300032: Object026
+    2300034: Object027
+    2300036: Pillow003
+    2300038: Pillow004
+    3300000: Bed
+    3300002: Box110
+    3300004: Box111
+    3300006: Box117
+    3300008: Box118
+    3300010: Box119
+    3300012: Box148
+    3300014: Box174
+    3300016: Box175
+    3300018: Box176
+    3300020: Box177
+    3300022: Box178
+    3300024: Object014
+    3300026: Object015
+    3300028: Object017
+    3300030: Object018
+    3300032: Object026
+    3300034: Object027
+    3300036: Pillow003
+    3300038: Pillow004
+    4300000: Pillow004
+    4300002: Object014
+    4300004: Object015
+    4300006: Box110
+    4300008: Pillow003
+    4300010: Object017
+    4300012: Object018
+    4300014: Box117
+    4300016: Box118
+    4300018: Box119
+    4300020: Box148
+    4300022: Box175
+    4300024: Box111
+    4300026: Bed
+    4300028: Object026
+    4300030: Box174
+    4300032: Box177
+    4300034: Box178
+    4300036: Object027
+    4300038: Box176
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
