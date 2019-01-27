@@ -19,5 +19,21 @@ game overX
 ApostropheX
 Items reset after roundX
 
+
 finale typing attack
-do interactable items - plaster heal damage, toy soldier patrols, dream catcher repels, worry doll fortify
+
+items all in 
+
+do interactable items - 
+plaster heal damage, 
+toy soldier patrols, 
+dream catcher repels, 
+worry doll fortify
+
+bed tag bed
+gamemanage respawn tag
+overlay assign
+camera box
+add trigger on bed
+assign gameover
+

@@ -18,6 +18,7 @@ public class DamagingObject : MonoBehaviour {
     {
         if (!other.gameObject.CompareTag("Projectile") && !other.gameObject.CompareTag("Damage") && !other.gameObject.CompareTag("Player"))
         {
+            
             if (isMegaParent)
             {
                 for (int i = 0; i < transform.childCount; i++)
@@ -73,7 +74,9 @@ public class DamagingObject : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(!collision.collider.gameObject.CompareTag("Projectile") && !collision.collider.gameObject.CompareTag("Damage") && !collision.collider.gameObject.CompareTag("Player"))
+        Debug.Log(collision.gameObject.name);
+
+        if (!collision.collider.gameObject.CompareTag("Projectile") && !collision.collider.gameObject.CompareTag("Damage") && !collision.collider.gameObject.CompareTag("Player"))
         {
             if (isMegaParent)
             {
