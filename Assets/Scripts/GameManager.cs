@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour {
 
     public GameObject overlay;
 
+    public Canvas canv;
+
     Bed bed;
 
     void Awake()
@@ -57,10 +59,13 @@ public class GameManager : MonoBehaviour {
         if (!waveStarted)
         {
             overlay.tag = "Overlay";
+            canv.enabled = true;
+
         }
         else
         {
             overlay.tag = "GameController";
+            canv.enabled = false;
         }
 
         if (Input.GetKeyDown(KeyCode.A))

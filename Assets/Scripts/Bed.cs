@@ -7,6 +7,9 @@ public class Bed : MonoBehaviour {
     public int health;
     public int maxHealth;
 
+    public GameObject image;
+    public GameObject text;
+
     GameManager man;
 
     // Use this for initialization
@@ -31,10 +34,20 @@ public class Bed : MonoBehaviour {
                 man.waveStarted = false;
                 man.ButtonCall(true);
 
+                image.SetActive(true);
+                text.SetActive(true);
+                Invoke("deactive", 5);
+
             }
         }
 
         
+    }
+
+    public void deactive()
+    {
+        image.SetActive(false);
+        text.SetActive(false);
     }
 
 

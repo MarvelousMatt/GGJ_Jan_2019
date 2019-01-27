@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33270356262153330}
   - component: {fileID: 23666766444683908}
   - component: {fileID: 64896998500976868}
+  - component: {fileID: 114242826577053362}
   m_Layer: 0
   m_Name: apostrphe
   m_TagString: Projectile
@@ -98,3 +99,14 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 674179796ab737041bdc7d78c6c6e40a, type: 3}
+--- !u!114 &114242826577053362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1963885751499240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf2f62663d0f224c907cfc0ed575227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
