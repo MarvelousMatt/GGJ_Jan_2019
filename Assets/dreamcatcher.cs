@@ -26,8 +26,8 @@ public class dreamcatcher : MonoBehaviour {
             {
                 try
                 {
-                    if(col.gameObject != gameObject)
-                        col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(3000,transform.position,10);
+                    if(col.gameObject != gameObject && !col.gameObject.CompareTag("Prop"))
+                        col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(1000,transform.position,10);
                 }
                 catch
                 {
