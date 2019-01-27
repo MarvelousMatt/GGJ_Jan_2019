@@ -11,7 +11,7 @@ public class DamagingObject : MonoBehaviour {
 
     private void Awake()
     {
-        //gameObject.tag = "Damage";
+        gameObject.tag = "Damage";
     }
 
     private void OnTriggerEnter(Collider other)
