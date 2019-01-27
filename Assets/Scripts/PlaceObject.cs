@@ -8,7 +8,7 @@ public class PlaceObject : MonoBehaviour {
     public GameObject[] itemToPlace;
     public GameObject[] holograms;
     public int[] amounts;
-
+    public int[] rounds;
 
     public Text leftNo;
 
@@ -40,7 +40,18 @@ public class PlaceObject : MonoBehaviour {
 
     private void Awake()
     {
+        
         cam = Camera.main;
+        ResetITemAmounts();
+    }
+
+    public void ResetITemAmounts()
+    {
+        
+        
+            rounds = (int[])amounts.Clone();
+        
+       
     }
 
 
@@ -61,7 +72,7 @@ public class PlaceObject : MonoBehaviour {
         }
 
         
-        leftNo.text = amounts[itemIndex].ToString();
+        leftNo.text = rounds[itemIndex].ToString();
         
     }
 
@@ -73,7 +84,7 @@ public class PlaceObject : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        leftNo.text = amounts[itemIndex].ToString();
+        leftNo.text = rounds[itemIndex].ToString();
     }
 	
 	// Update is called once per frame
@@ -171,13 +182,13 @@ public class PlaceObject : MonoBehaviour {
     { 
 
 
-        if (currentHolo != null && canPlace && !isButton && amounts[itemIndex] != 0)
+        if (currentHolo != null && canPlace && !isButton && rounds[itemIndex] != 0)
         {
             Instantiate(itemToPlace[itemIndex], holoPos, currentHolo.transform.rotation);
-            amounts[itemIndex] -= 1;
+            rounds[itemIndex] -= 1;
         }
 
-        leftNo.text = amounts[itemIndex].ToString();
+        leftNo.text = rounds[itemIndex].ToString();
 
         
     }

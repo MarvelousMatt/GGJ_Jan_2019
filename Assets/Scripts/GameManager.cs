@@ -40,14 +40,29 @@ public class GameManager : MonoBehaviour {
 
     public Button startWaveButton;
 
+    public GameObject overlay;
+
+    Bed bed;
+
     void Awake()
     {
         letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ,.!?'".ToLower().ToCharArray();
+        bed = GameObject.FindGameObjectWithTag("Bed").GetComponent<Bed>();
         ButtonCall(true);
+        
     }
 
     private void Update()
     {
+        if (!waveStarted)
+        {
+            overlay.tag = "Overlay";
+        }
+        else
+        {
+            overlay.tag = "GameController";
+        }
+
         if (Input.GetKeyDown(KeyCode.A))
         {
             StopAllCoroutines();
@@ -86,6 +101,9 @@ public class GameManager : MonoBehaviour {
             {
                 Destroy(thing);
             }
+
+            bed.health = bed.maxHealth;
+            GetComponent<PlaceObject>().ResetITemAmounts();
 
         }
 

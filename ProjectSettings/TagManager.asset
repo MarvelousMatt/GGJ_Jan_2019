@@ -9,6 +9,7 @@ TagManager:
   - Floor
   - Damage
   - Projectile
+  - Bed
   layers:
   - Default
   - TransparentFX

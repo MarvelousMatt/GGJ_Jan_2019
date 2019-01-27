@@ -4,33 +4,37 @@ using UnityEngine;
 
 public class Bed : MonoBehaviour {
 
+    public int health;
+    public int maxHealth;
 
-	// Use this for initialization
-	void Start () {
-		
+    GameManager man;
+
+    // Use this for initialization
+    void Start ()
+    {
+       health =  maxHealth;
+        man = GameObject.FindGameObjectWithTag("Respawn").GetComponent<GameManager>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("Dwa");
 
-        if (other.gameObject.CompareTag("Projectile")) 
+        if (other.gameObject.CompareTag("Projectile"))
         {
-            //Destroy(other.gameObject);
+            health -= 1; 
 
-            //for (int i = 0; i < other.gameObject.transform.parent.childCount; i++)
-            //{
-            //    other.gameObject.transform.GetChild(i).tag = "Player";
-            //}
+            if(health < 1)
+            {
+                Debug.Log("You died");
+                man.StopAllCoroutines();
+                man.waveStarted = false;
+                man.ButtonCall(true);
 
-            
-            Debug.Log("You die");
+            }
         }
+
+        
     }
 
 

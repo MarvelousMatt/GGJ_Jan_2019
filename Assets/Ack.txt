@@ -15,11 +15,9 @@ Restrict amountX
 item choosingX
 attack warningsX
 win stateX
+game overX
+ApostropheX
+Items reset after roundX
 
 finale typing attack
 do interactable items - plaster heal damage, toy soldier patrols, dream catcher repels, worry doll fortify
-game over
-
-main menu
-quit button
-Apostrophe

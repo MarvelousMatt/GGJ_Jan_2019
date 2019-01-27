@@ -16,7 +16,7 @@ public class DamagingObject : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("Projectile"))
+        if (!other.gameObject.CompareTag("Projectile") && !other.gameObject.CompareTag("Damage") && !other.gameObject.CompareTag("Player"))
         {
             if (isMegaParent)
             {
@@ -73,7 +73,7 @@ public class DamagingObject : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(!collision.collider.gameObject.CompareTag("Projectile"))
+        if(!collision.collider.gameObject.CompareTag("Projectile") && !collision.collider.gameObject.CompareTag("Damage") && !collision.collider.gameObject.CompareTag("Player"))
         {
             if (isMegaParent)
             {
