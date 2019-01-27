@@ -668,7 +668,7 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(4.5f);
         BeginTyping(26, AttackStyle.extra2, 0.05f);
         yield return new WaitForSeconds(4.5f);
-        BeginTyping(27, AttackStyle.arcingL, 0.05f);
+        BeginTyping(27, AttackStyle.above, 0.05f);
         yield return new WaitForSeconds(4.5f);
         BeginTyping(28, AttackStyle.noDamage, 0.05f);
         yield return new WaitForSeconds(4.5f);
