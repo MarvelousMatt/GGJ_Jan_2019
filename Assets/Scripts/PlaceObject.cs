@@ -131,7 +131,7 @@ public class PlaceObject : MonoBehaviour {
         {
             if (hit.collider.gameObject.CompareTag("Overlay"))//Probably more conditions here later
             {
-                currentHolo = Instantiate(holograms[itemIndex], holoPos, Quaternion.identity);
+                currentHolo = Instantiate(holograms[0], holoPos, Quaternion.identity);
             }
         }
 

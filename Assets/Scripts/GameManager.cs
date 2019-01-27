@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour {
         letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ,.!?'".ToLower().ToCharArray();
         bed = GameObject.FindGameObjectWithTag("Bed").GetComponent<Bed>();
         ButtonCall(true);
-        
+        DoWave(waveNo);
     }
 
     private void Update()
@@ -643,7 +643,7 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(4.5f);
         BeginTyping(16, AttackStyle.noDamage, 0.05f);
         yield return new WaitForSeconds(4.5f);
-        BeginTyping(17, AttackStyle.arcingL, 0.05f);
+        BeginTyping(17, AttackStyle.above, 0.05f);
         yield return new WaitForSeconds(4.5f);
         BeginTyping(18, AttackStyle.extra2, 0.05f);
         yield return new WaitForSeconds(4.5f);
