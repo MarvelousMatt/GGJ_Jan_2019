@@ -785,13 +785,13 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(1);
         //ur stuff
 
-        BeginTyping(73, AttackStyle.above, 0.05f);
+        BeginTyping(73, AttackStyle.arcingL, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(74, AttackStyle.above, 0.05f);
+        BeginTyping(74, AttackStyle.arcingL, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(75, AttackStyle.above, 0.05f);
+        BeginTyping(75, AttackStyle.arcingR, 0.05f);
         yield return new WaitForSeconds(2f);
-        BeginTyping(76, AttackStyle.above, 0.05f);
+        BeginTyping(76, AttackStyle.arcingR, 0.05f);
         yield return new WaitForSeconds(2f);
         BeginTyping(77, AttackStyle.arcingL, 0.05f);
         yield return new WaitForSeconds(2f);
@@ -803,21 +803,21 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(2f);
         BeginTyping(81, AttackStyle.sideL, 0.05f);
         yield return new WaitForSeconds(2f);
+        BeginTyping(82, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(83, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(84, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(85, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(86, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
+        BeginTyping(87, AttackStyle.above, 0.05f);
+        yield return new WaitForSeconds(2f);
 
         //player enters new text here
 
-        BeginTyping(82, AttackStyle.noDamage, 0.05f);
-        yield return new WaitForSeconds(2f);
-        BeginTyping(83, AttackStyle.noDamage, 0.05f);
-        yield return new WaitForSeconds(2f);
-        BeginTyping(84, AttackStyle.noDamage, 0.05f);
-        yield return new WaitForSeconds(2f);
-        BeginTyping(85, AttackStyle.noDamage, 0.05f);
-        yield return new WaitForSeconds(2f);
-        BeginTyping(86, AttackStyle.noDamage, 0.05f);
-        yield return new WaitForSeconds(2f);
-        BeginTyping(87, AttackStyle.noDamage, 0.05f);
-        yield return new WaitForSeconds(2f);
         BeginTyping(88, AttackStyle.noDamage, 0.05f);
         yield return new WaitForSeconds(2f);
         BeginTyping(89, AttackStyle.noDamage, 0.05f);
