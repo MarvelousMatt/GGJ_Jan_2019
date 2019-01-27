@@ -391,9 +391,9 @@ public class GameManager : MonoBehaviour {
             //PLAYER CHATS SHIT
 
             case 88:
-                return "Ack! I find your words offensive! ";
+                return "You're still alive? ";
             case 89:
-                return "I had no idea you were so poetic! ";
+                return "I had no idea you were so strong. ";
             case 90:
                 return "...Fine then.  ";
             case 91:
